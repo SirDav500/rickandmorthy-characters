@@ -1,0 +1,27 @@
+<app-header></app-header>
+<main>
+  <div class="container">
+    <div class="search">
+      <h1>Início</h1>
+
+
+      <mat-form-field class="form" appearance="outline">
+        <mat-label class="label">Pesquisar</mat-label>
+        <input matInput class="input" type="text" [(ngModel)]="searchTerm" (input)="onSearchTermChanged(searchTerm)">
+      </mat-form-field>
+
+
+    </div>
+
+    <div class="cards" *ngIf="characters">
+      <app-card *ngFor="let character of characters" [character]="character" [isFavorite]="isFav(character)"
+        (updateFavorite)="updateFav( $event, character)"></app-card>
+    </div>
+
+    <div class="no-characters" *ngIf="!characters">
+      <h2> Nada foi encontrado</h2>
+      <span>Tente realizar uma nova busca.</span>
+    </div>
+
+  </div>
+</main>

@@ -1,0 +1,119 @@
+header {
+  width: 100%;
+  background: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    margin-left: 24px;
+  }
+
+  div.buttons {
+    display: flex;
+    align-items: center;
+    margin: 12px 24px;
+  }
+}
+
+button {
+  color: var(--gray);
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  border: 0.5px solid var(--gray-10);
+  div {
+    display: flex;
+    align-items: center;
+    margin: 8px 0px;
+  }
+
+  &:hover {
+    background-color: var(--gray-10);
+    cursor: pointer;
+  }
+
+  transition: background-color 0.3s;
+}
+
+button.home {
+  border-radius: 8px 0px 0px 8px;
+
+  img {
+    margin-left: 12px;
+    margin-right: 0.5rem;
+    width: 24px;
+    height: 24px;
+  }
+  span {
+    margin-right: 1rem;
+    font-size: bold;
+  }
+}
+
+button.favs {
+  border-radius: 0px 8px 8px 0px;
+
+  img {
+    margin-left: 0.5rem;
+    width: 24px;
+    height: 24px;
+  }
+  span {
+    font-size: bold;
+    margin: 0px 8px;
+  }
+  span.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+}
+
+button.active {
+  color: var(--black);
+  background-color: var(--white);
+
+  span.count {
+    color: var(--white);
+    background-color: var(--black);
+  }
+
+  &:hover {
+    background-color: var(--gray-5);
+  }
+}
+
+@media (max-width: 433px) {
+  button {
+    min-height: 40px;
+  }
+
+  .description {
+    display: none;
+  }
+
+  button.favs {
+    span.count {
+      margin: 0px 2px;
+    }
+  }
+  button.home {
+    span {
+      margin-left: 5px;
+    }
+  }
+  button.favs {
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+}

@@ -1,0 +1,131 @@
+main {
+  display: flex;
+  justify-content: center;
+  background: var(--gray-20);
+  min-height: 100vh;
+}
+
+::ng-deep {
+  .mat-input-element {
+    caret-color: var(--white);
+    color: var(--white) !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: var(--gray);
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: var(--gray-10);
+  }
+
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: var(--gray-10);
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.form {
+  width: 20.5rem;
+}
+.label {
+  color: var(--white);
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 720px;
+}
+
+div.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 36px;
+
+  h1 {
+    font-family: "Creepster", system-ui;
+    color: var(--blue-5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--green-5);
+    font-size: 48px;
+  }
+
+  // ::-webkit-input-placeholder {
+  //   color: var(--gray-5);
+  // }
+}
+
+div.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+div.no-characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--black);
+  min-height: 511px;
+  min-width: 720px;
+  border-radius: 8px;
+  margin-bottom: 48px;
+  margin-top: 12px;
+
+  h2 {
+    color: var(--white);
+    font-size: 24px;
+  }
+
+  span {
+    color: var(--gray);
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 776px) {
+  div.search {
+    max-width: 496px;
+  }
+  div.cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  div.no-characters {
+    min-width: 480px;
+  }
+}
+
+@media (max-width: 520px) {
+  div.search {
+    max-width: 320px;
+    flex-direction: column;
+  }
+  .form {
+    width: auto;
+  }
+  div.cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  div.no-characters {
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 433px) {
+  div.search {
+    flex-direction: column;
+  }
+  div.container {
+    width: 100vw;
+  }
+  div.no-characters {
+    min-width: 320px;
+  }
+}

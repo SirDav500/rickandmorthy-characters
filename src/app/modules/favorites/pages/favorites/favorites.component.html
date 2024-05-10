@@ -1,0 +1,23 @@
+<app-header></app-header>
+<main>
+  <div class="container">
+    <div class="top">
+      <h1>Favoritos</h1>
+    </div>
+
+    <div class="cards" *ngIf="favorites">
+      <app-card *ngFor="let character of favorites" [character]="character" [isFavorite]="true"
+        (updateFavorite)="removeFromFavorites(character)"></app-card>
+    </div>
+
+    <div>
+      <div class="no-characters" *ngIf="!favorites || favorites.length === 0">
+        <h2>Parece que você ainda não tem favoritos</h2>
+        <span>Volte à página inicial e escolha os melhores para você.</span>
+        <button routerLink="/home">Voltar ao Início</button>
+      </div>
+    </div>
+  </div>
+
+
+</main>

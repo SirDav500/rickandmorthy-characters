@@ -1,0 +1,22 @@
+<header>
+  <img routerLink="/home" class="logo-header" src="../../../../../assets/images/logo-rick-morty.svg" alt="">
+  <div class="buttons">
+    <button class="home" [routerLink]="['/home']" [class.active]="isActive('/') || isActive('/home')">
+      <div>
+        <img
+          [src]="isActive('/') || isActive('/home')  ? '../../../../../assets/icons/icon-black-house.svg' : '../../../../../assets/icons/icon-gray-house.svg'"
+          alt="">
+        <span class="description">Início</span>
+      </div>
+    </button>
+    <button class="favs" routerLink="/favorites" routerLinkActive="active">
+      <div>
+        <img
+          [src]="isActive('/favorites') ? '../../../../../assets/icons/icon-black-heart.svg' : '../../../../../assets/icons/icon-favs.svg'"
+          alt="">
+        <span class="description">Favoritos</span>
+        <span class="count">{{favoriteCount$ | async}}</span>
+      </div>
+    </button>
+  </div>
+</header>

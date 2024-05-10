@@ -1,0 +1,72 @@
+div.card {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+  border-radius: 8px;
+  margin: 12px;
+  max-width: 224px;
+  max-height: 324px;
+  position: relative;
+
+  img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 224px;
+    height: 224px;
+  }
+}
+
+button.heart {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  width: 20px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    color: var(--black);
+    width: 20px;
+    height: 19px;
+    transition: transform 0.7s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  img:hover {
+    transform: scale(1.2);
+  }
+}
+
+div.card-content {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: var(--white);
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 12px 12px 4px 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  p {
+    margin: 0 12px 12px 12px;
+    font-size: 16px;
+    color: var(--gray);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
